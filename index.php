@@ -50,7 +50,7 @@ session_destroy();
                                     <div class="text-center">
                                         <h1 class="h4 text-primary mb-4">ยินดีต้อนรับ</h1>
                                     </div>
-                                    <form class="user" method="POST" action="/ch.php">
+                                    <form class="user" method="POST" action="ch.php">
                                         <div class="form-group">
                                             <input type="text" name="txt1" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username" required>
                                         </div>

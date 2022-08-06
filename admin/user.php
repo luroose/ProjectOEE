@@ -238,6 +238,7 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
 
 
                                                 <div class="card-body">
+                                                    
                                                       <div class="table-responsive">
                                                             <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
 
@@ -262,7 +263,14 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
                                                                                     <td><?= $row["u_usersname"]; ?></td>
                                                                                     <td><?= $row["Status"]; ?></td>
                                                                                     <td><a href="post/edit.php?id=<?= $row["u_id"]; ?>"><button class="btn btn-warning w-50">เเก้ไข</button></a></td>
-                                                                                    <td><a href="post/del.php?id=<?= $row["u_id"]; ?>"><button class="btn btn-danger w-50">ลบ</button></a></td>
+                                                                                    <?php
+                                                                                    if ($row["u_usersname"] == $_SESSION["user"]) {
+                                                                                    } else {
+                                                                                    ?>
+                                                                                          <td><a href="post/del.php?id=<?= $row["u_id"]; ?>"><button class="btn btn-danger w-50">ลบ</button></a></td>
+                                                                                    <?php
+                                                                                    }
+                                                                                    ?>
                                                                               </tr>
 
                                                                         <?php

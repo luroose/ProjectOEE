@@ -253,7 +253,7 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <div class="col-form-label-sm">ชื่อ :</div>
-                                                        <input type="text" class="form-control form-control-sm" id="txt2" name="txt2" placeholder="" required>
+                                                        <input type="text" class="form-control form-control-sm" id="txt2" name="txt2" placeholder="" value="<?= $_SESSION["user"] ?>" required>
                                                         <div class="invalid-feedback">
                                                             กรุณาใส่ข้อมูลให้ครบ
                                                         </div>
@@ -262,7 +262,7 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
                                                 <div class="form-group row">
                                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                                         <div class="col-form-label-sm">ชิ้นงานที่ทำได้ : </div>
-                                                        <input type="" class="form-control form-control-sm " id="txt3" name="txt3" placeholder="" required>
+                                                        <input type="number" class="form-control form-control-sm " id="txt3" name="txt3" placeholder="" required>
                                                         <div class="invalid-feedback">
                                                             กรุณาใส่ข้อมูลให้ครบ
                                                         </div>
@@ -279,7 +279,7 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
                                                 <div class="form-group row">
                                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                                         <div class="col-form-label-sm">ของเสีย : </div>
-                                                        <input type="" class="form-control form-control-sm " id="txt7" name="txt7" placeholder="" required>
+                                                        <input type="number" class="form-control form-control-sm " id="txt7" name="txt7" placeholder="" required>
                                                         <div class="invalid-feedback">
                                                             กรุณาใส่ข้อมูลให้ครบ
                                                         </div>

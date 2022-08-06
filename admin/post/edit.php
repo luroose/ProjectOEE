@@ -24,17 +24,14 @@ if (isset($_POST["txt1"])) {
 
       $sql = "UPDATE users SET  u_usersname = '" . $arr[1] . "', u_pssaword= '" . $arr[2] . "', Status = '" . $arr[3] . "' WHERE u_id = " . $arr[0] . ";";
       $re = mysqli_query($conn, $sql);
-  
-      
+    
       if ($re) {
             echo '<script>alert("บันทึกสำเร็จ")</script>';
             header('Location: ../user.php');
             exit(0);
-
       } else {
             echo '<script>alert("บันทึกไม่สำเร็จ")</script>';
       }
-      
 }
 if (isset($_GET["id"]) && $_GET["id"] !== "") {
 ?>
@@ -103,7 +100,7 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
                                     <div class="row">
                                           <div class="col-12 text-center">
                                                 <div class="d-grid gap-2 mt-3">
-                                                <a href="../user.php"><button type="submit" class="btn btn-sm btn-primary w-100" name="submit">OK</button>
+                                                      <a href="../user.php"><button type="submit" class="btn btn-sm btn-primary w-100" name="submit">OK</button>
                                                 </div>
                                                 <div class="d-grid gap-2 mt-3">
                                                       <a href="../user.php"><button type="button" class="btn btn-sm btn-danger w-100">กลับไปหน้าหลัก</button></a>
@@ -114,7 +111,7 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
                               </div>
 
                               <div class="card-footer text-muted">
-                                    
+
                               </div>
                         </div>
             </form>
