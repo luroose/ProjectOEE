@@ -30,6 +30,7 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 
@@ -339,7 +340,14 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
                                                     <div class="col-sm-6  ">
                                                         <div class="col-form-label-sm">เวลาเปิดเครื่องต่อ 1 กะ : </div>
                                                         <div class="input-group input-group-sm">
-                                                            <input type="number" step="any" class="form-control form-control-sm " id="txt6" name="txt6" placeholder="" onkeyup="in2();" onclick="select();" required>
+                                                            <?php
+                                                            if (isset($_GET["x3"])) {
+                                                                $d1 = $_GET["x3"];
+                                                            } else {
+                                                                $d1 = "";
+                                                            }
+                                                            ?>
+                                                            <input type="number" step="any" class="form-control form-control-sm " id="txt6" name="txt6" placeholder="" onkeyup="in2();" onclick="select();" value="<?= $d1 ?>" required>
                                                             <span class="input-group-text " id="basic-addon1">ชม.</span>
                                                         </div>
 
@@ -563,10 +571,19 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
         </div>
     </div>
     <script>
+        $(document).ready(function() {
+            
+            in3();
+        });
+
         function in1() {
+
             var d = document.getElementById("txt1").value;
             var x = document.getElementById("txt2").value;
             var c = (d - x);
+            document.getElementById("txt4").value = x;
+            document.getElementById("txt7").value = x;
+
             document.getElementById("txt3").value = c;
             var c1 = document.getElementById("txt3").value;
             var c2 = document.getElementById("txt4").value;
@@ -598,7 +615,8 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
                 arr.classList.add("text-success");
                 document.getElementById("er1").innerText = "มากกว่า 90%"
             }
-
+            in2();
+            in3();
 
         }
 
@@ -631,7 +649,8 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
                 arr.classList.add("text-success");
                 document.getElementById("er2").innerText = "มากกว่า 90%"
             }
-
+            in1();
+            in3();
         }
 
         function in3() {
@@ -664,7 +683,8 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
                 arr.classList.add("text-success");
                 document.getElementById("er3").innerText = "ตรงเป้าหมาย"
             }
-
+            in1();
+            in2();
 
         }
     </script>
