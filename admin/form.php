@@ -89,7 +89,7 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
             <li class="nav-item active">
                 <a class="nav-link" href="home.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>หน้าหลัก</span></a>
             </li>
 
             <!-- Divider -->
@@ -526,8 +526,8 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
                                         <div class="form-group row mt-3">
                                             <center>
                                                 <div class="row mt-3">
-                                                    <div class="col-6"><input class="btn btn-primary btn-user btn-block" id="submit" name="math" type="submit" value="Submit"></div>
-                                                    <div class="col-6"><input class="btn btn-danger btn-user btn-block" type="reset" value="Reset"></button></div>
+                                                    <div class="col-6"><input class="btn btn-primary btn-user btn-block" id="submit" name="math" type="submit" value="บันทึก"></div>
+                                                    <div class="col-6"><input class="btn btn-danger btn-user btn-block" type="reset" value="คืนค่า"></button></div>
                                                 </div>
                                         </div>
                                     </div>

@@ -18,7 +18,7 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard</title>
+    <title>หน้าหลัก</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -66,7 +66,7 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
 
                 <!-- Heading -->
                 <div class="sidebar-heading">
-                    form
+                    Form
                 </div>
 
                 <!-- Nav Item - Pages Collapse Menu -->

@@ -55,7 +55,7 @@ session_start();
                 <li class="nav-item active">
                     <a class="nav-link" href="">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard</span></a>
+                        <span>หน้าหลัก</span></a>
                 </li>
 
                 <!-- Divider -->
@@ -70,13 +70,13 @@ session_start();
                 <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                         <i class="fas fa-fw fa-clipboard"></i>
-                        <span>แบบฟอร์ม</span>
+                        <span>จัดการข้อมูล</span>
                     </a>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">แบบฟอร์มการทำงาน:</h6>
-                            <a class="collapse-item" href="form.php">กรอกข้อมูล</a>
                             <a class="collapse-item" href="tables.php">บันทึกยอดผลิตประจำวัน</a>
+                            <a class="collapse-item" href="form.php">กรอกข้อมูลการทำงาน</a>
                             
                         </div>
                     </div>
@@ -96,13 +96,7 @@ session_start();
                         <span>กราฟ</span></a>
                 </li>
 
-                <!-- Nav Item - Tables -->
-                <li class="nav-item">
-                    <a class="nav-link" href="tables.php">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>บันทึกยอดผลิตประจำวัน</span></a>
-                </li>
-
+                
                 <!-- Divider -->
                 <hr class="sidebar-divider d-none d-md-block">
 

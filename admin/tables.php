@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
             <li class="nav-item">
                 <a class="nav-link" href="home.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>หน้าหลัก</span></a>
             </li>
 
             <!-- Divider -->

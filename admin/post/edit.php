@@ -100,7 +100,7 @@ if (isset($_GET["id"]) && $_GET["id"] !== "") {
                                     <div class="row">
                                           <div class="col-12 text-center">
                                                 <div class="d-grid gap-2 mt-3">
-                                                      <a href="../user.php"><button type="submit" class="btn btn-sm btn-primary w-100" name="submit">OK</button>
+                                                      <a href="../user.php"><button type="submit" class="btn btn-sm btn-primary w-100" name="submit">บันทึก</button>
                                                 </div>
                                                 <div class="d-grid gap-2 mt-3">
                                                       <a href="../user.php"><button type="button" class="btn btn-sm btn-danger w-100">กลับไปหน้าหลัก</button></a>

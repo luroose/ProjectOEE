@@ -88,7 +88,7 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
                   <li class="nav-item active">
                         <a class="nav-link" href="home.php">
                               <i class="fas fa-fw fa-tachometer-alt"></i>
-                              <span>Dashboard</span></a>
+                              <span>หน้าหลัก</span></a>
                   </li>
 
                   <!-- Divider -->
@@ -110,7 +110,6 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
                                     <h6 class="collapse-header">แบบฟอร์มการทำงาน:</h6>
                                     <a class="collapse-item" href="tables.php">บันทึกยอดผลิตประจำวัน</a>
                                     <a class="collapse-item" href="form.php">กรอกข้อมูล</a>
-                                    <a class="collapse-item" href="user.php">จัดการข้อมูลผู้ใช้</a>
                               </div>
                         </div>
                   </li>
@@ -238,7 +237,7 @@ if (empty($_SESSION["status"]) || $_SESSION["status"] !== "Admin") {
 
 
                                                 <div class="card-body">
-                                                    
+
                                                       <div class="table-responsive">
                                                             <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
 

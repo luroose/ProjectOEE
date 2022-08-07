@@ -77,7 +77,7 @@ if (isset($_POST['submit'])) {
             <li class="nav-item">
                 <a class="nav-link" href="home.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>หน้าหลัก</span></a>
             </li>
 
             <!-- Divider -->
@@ -85,7 +85,7 @@ if (isset($_POST['submit'])) {
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                From
             </div>
 
 
@@ -94,7 +94,7 @@ if (isset($_POST['submit'])) {
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-clipboard"></i>
-                    <span>แบบฟอร์ม</span>
+                    <span>จัดการข้อมูล</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -120,12 +120,7 @@ if (isset($_POST['submit'])) {
                     <span>กราฟ</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>บันทึกยอดผลิตประจำวัน</span></a>
-            </li>
+            
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -219,13 +214,13 @@ if (isset($_POST['submit'])) {
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">OEE</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">ประสิทธิผลโดยรวมของเครื่องจักร</h6>
                         </div>
                         <div class="card-body">
                             <div class="mx-auto col-12">
                                 <div class="card">
                                     <div class="card-header">
-                                        ตาราง OEE
+                                    OEE
                                     </div>
                                     <div class="card-body">
                                         <div class="row ">

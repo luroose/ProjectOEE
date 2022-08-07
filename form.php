@@ -1,9 +1,7 @@
 <?php
 session_start();
 include "config.php";
-date_default_timezone_set('Asia/Bangkok');
-
-
+date_default_timezone_set('Asia/Bangkok')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +25,7 @@ date_default_timezone_set('Asia/Bangkok');
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 
@@ -93,21 +92,20 @@ date_default_timezone_set('Asia/Bangkok');
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                form
+                Form
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-clipboard"></i>
-                    <span>แบบฟอร์ม</span>
+                    <span>จัดการข้อมูล</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">แบบฟอร์มการทำงาน:</h6>
-                        <a class="collapse-item" href="form.php">กรอกข้อมูล</a>
                         <a class="collapse-item" href="tables.php">บันทึกยอดผลิตประจำวัน</a>
-                        
+                        <a class="collapse-item" href="form.php">กรอกข้อมูลการทำงาน</a>
                     </div>
                 </div>
             </li>
@@ -126,12 +124,7 @@ date_default_timezone_set('Asia/Bangkok');
                     <span>กราฟ</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.php">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>บันทึกยอดผลิตประจำวัน</span></a>
-            </li>
+            
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -280,7 +273,7 @@ date_default_timezone_set('Asia/Bangkok');
                                                 </div>
                                                 <div class="form-group row">
                                                     <div class="col-sm-6  ">
-                                                        <div class="col-form-label-sm">เวลาทำงานหลังจากพัก : </div>
+                                                        <div class="col-form-label-sm">เวลาทำงานจริง : </div>
                                                         <div class="input-group input-group-sm">
                                                             <input type="number" step="any" class="form-control form-control-sm " id="txt3" name="txt3" readonly="" placeholder="" onclick="select();" onkeyup="in1();" required>
                                                             <span class="input-group-text " id="basic-addon1">ชม.</span>
@@ -337,7 +330,14 @@ date_default_timezone_set('Asia/Bangkok');
                                                     <div class="col-sm-6  ">
                                                         <div class="col-form-label-sm">เวลาเปิดเครื่องต่อ 1 กะ : </div>
                                                         <div class="input-group input-group-sm">
-                                                            <input type="number" step="any" class="form-control form-control-sm " id="txt6" name="txt6" placeholder="" onkeyup="in2();" onclick="select();" required>
+                                                            <?php
+                                                            if (isset($_GET["x3"])) {
+                                                                $d1 = $_GET["x3"];
+                                                            } else {
+                                                                $d1 = "";
+                                                            }
+                                                            ?>
+                                                            <input type="number" step="any" class="form-control form-control-sm " id="txt6" name="txt6" placeholder="" onkeyup="in2();" onclick="select();" value="<?= $d1 ?>" required>
                                                             <span class="input-group-text " id="basic-addon1">ชม.</span>
                                                         </div>
 
@@ -561,10 +561,19 @@ date_default_timezone_set('Asia/Bangkok');
         </div>
     </div>
     <script>
+        $(document).ready(function() {
+            
+            in3();
+        });
+
         function in1() {
+
             var d = document.getElementById("txt1").value;
             var x = document.getElementById("txt2").value;
             var c = (d - x);
+            document.getElementById("txt4").value = x;
+            document.getElementById("txt7").value = x;
+
             document.getElementById("txt3").value = c;
             var c1 = document.getElementById("txt3").value;
             var c2 = document.getElementById("txt4").value;
@@ -596,7 +605,8 @@ date_default_timezone_set('Asia/Bangkok');
                 arr.classList.add("text-success");
                 document.getElementById("er1").innerText = "มากกว่า 90%"
             }
-
+            in2();
+            in3();
 
         }
 
@@ -629,7 +639,8 @@ date_default_timezone_set('Asia/Bangkok');
                 arr.classList.add("text-success");
                 document.getElementById("er2").innerText = "มากกว่า 90%"
             }
-
+            in1();
+            in3();
         }
 
         function in3() {
@@ -662,7 +673,8 @@ date_default_timezone_set('Asia/Bangkok');
                 arr.classList.add("text-success");
                 document.getElementById("er3").innerText = "ตรงเป้าหมาย"
             }
-
+            in1();
+            in2();
 
         }
     </script>
