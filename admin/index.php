@@ -63,7 +63,7 @@ session_destroy();
                                         </button>
                                         <hr>
 
-                                        <a href="/index.php"><button type="button" class="btn btn-primary btn-user btn-block">
+                                        <a href="../index.php"><button type="button" class="btn btn-primary btn-user btn-block">
                                                 User
                                             </button></a>
 
